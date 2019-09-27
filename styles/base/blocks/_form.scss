@@ -1,0 +1,166 @@
+
+
+
+.form {
+  @include flex();
+  @include flex-pos();
+
+  width: 100%;
+
+  &__group {
+    @include flex();
+    @include flex-pos();
+
+    width: 100%;
+
+    padding: $gutter-xs 0;
+  }
+
+  &__control {
+    width: 100%;
+
+    padding: $gutter-xs / 2 $gutter-xs;
+
+    transition: 150ms ease-in-out;
+
+    border: $border;
+    border-radius: $radius-circle;
+    box-shadow: $box-shadow-xs;
+
+    &--textarea {
+      border-radius: $radius;
+    }
+
+    &--range {
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      -webkit-appearance: none;
+
+      &:focus {
+        outline: none;
+        box-shadow: $box-shadow-xs;
+      }
+
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 0.3rem;
+        cursor: pointer;
+        animate: 0.2s;
+        // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        background: $alpha;
+        border-radius: 10rem;
+        // border: 0.2px solid #010101;
+      }
+
+      &::-webkit-slider-thumb {
+        // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 0.2rem solid white;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 100%;
+        background: lighten($alpha, 30%);
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -0.65rem;
+      }
+
+      &:focus::-webkit-slider-runnable-track {
+        background: $alpha;
+      }
+
+      &::-moz-range-track {
+        width: 100%;
+        height: 8.4px;
+        cursor: pointer;
+        animate: 0.2s;
+        //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        background: $alpha;
+        border-radius: 10rem;
+        //border: 0.2px solid #010101;
+      }
+
+      &::-moz-range-thumb {
+        // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 0.2rem solid white;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 100%;
+        background: lighten($alpha, 30%);
+        cursor: pointer;
+      }
+
+      &::-ms-track {
+        width: 100%;
+        height: 8.4px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: transparent;
+        border-color: transparent;
+        border-width: 16px 0;
+        color: transparent;
+      }
+
+      &::-ms-fill-lower {
+        background: $alpha;
+        border: 0.2rem solid white;
+        border-radius: 10rem;
+        // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      }
+
+      &::-ms-fill-upper {
+        background: $alpha;
+        border: 0.2rem solid white;
+        border-radius: 10rem;
+        // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      }
+
+      &::-ms-thumb {
+        // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        // border: 1px solid #000000;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 100%;
+        background: lighten($alpha, 30%);
+        cursor: pointer;
+      }
+
+      &:focus::-ms-fill-lower {
+        background: $alpha;
+      }
+
+      &:focus::-ms-fill-upper {
+        background: $alpha;
+      }
+    }
+
+    &::placeholder {
+      color: $gray-5;
+    }
+    
+    &.is-invalid {
+      box-shadow: 0 ($font-size-xs / 2 - 3px) $font-size * 0.4 rgba(255, 0, 0, 0.5);
+      border: 1px solid red;
+    }
+
+    &.is-valid {
+      box-shadow: 0 ($font-size-xs / 2 - 3px) $font-size * 0.4 rgb(25, 255, 25);
+      border: 1px solid rgb(0, 211, 0);
+    }
+  }
+}
+
+
+
+@include up($sm){
+  
+  .form {
+
+    &__group {
+
+      padding: $gutter-xs;
+    }
+  }
+}
+

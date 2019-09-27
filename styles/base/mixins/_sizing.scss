@@ -1,0 +1,14 @@
+
+
+
+@mixin size($size: 100%){
+
+  @if $size < 0 {
+    @error 'Size cannot be lower than 0';
+  } @else if $size > 100 {
+    @error 'Size cannot be higher than 100';
+  }
+
+  width: ($size / 100) * 100;
+  height: ($size / 100) * 100;
+}

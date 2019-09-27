@@ -1,0 +1,209 @@
+
+
+
+.btn {
+  padding: $gutter-xs $gutter-sm;
+
+  font-size: $font-size;
+  border: 1px solid transparent;
+  border-radius: $radius-xs;
+  background-color: #fff;
+
+  transition: 150ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+
+  &--squared {
+    @include flex();
+    @include flex-pos();
+
+    width: $font-size-4xl;
+    height: $font-size-4xl;
+
+    padding: 0;
+
+    position: relative;
+  }
+
+  &--circle {
+    @include flex();
+    @include flex-pos();
+    
+    width: $font-size-4xl;
+    height: $font-size-4xl;
+    
+    padding: 0;
+    
+    border-radius: $radius-circle;
+
+    position: relative;
+  }
+
+  &--rounded {
+    border-radius: $radius-circle;
+  }
+
+
+  &--margin {
+
+    &-h {
+      margin: 0 $gutter-xs / 5;
+    }
+  }
+
+
+  &--alpha {
+    background-color: $alpha;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $alpha;
+    }
+  }
+
+  &--beta {
+    background-color: $beta;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $beta;
+    }
+  }
+
+  &--green {
+    background-color: $green;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $green;
+    }
+  }
+  
+
+  &--white {
+    background-color: #fff;
+    color: $alpha;
+
+    &:hover {
+      background-color: $alpha;
+      color: #fff;
+    }
+  }
+
+  &--gray {
+    background-color: $gray;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $gray;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $alpha;
+
+    &:hover {
+      background-color: $alpha;
+      color: #fff;
+    }
+
+    &-alt {
+      background-color: transparent;
+      color: #fff;
+
+      &:hover {
+        background-color: $alpha;
+      }
+    }
+  }
+
+
+  &--outline {
+
+    &-alpha {
+      background-color: transparent;
+      color: $alpha;
+      border: 1px solid $alpha;
+
+      &:hover {
+        background-color: $alpha;
+        color: #fff;
+      }
+    }
+
+    &-beta {
+      background-color: transparent;
+      color: $beta;
+      border: 1px solid $beta;
+
+      &:hover {
+        background-color: $beta;
+        color: #fff;
+      }
+    }
+
+    &-green {
+      background-color: transparent;
+      color: $green-dark-1;
+      border: 1px solid $green-dark-1;
+
+      &:hover {
+        background-color: $green;
+        color: #fff;
+        border: 1px solid $green;
+      }
+    }
+
+    &-white {
+      background-color: transparent;
+      color: white;
+      border: 1px solid #fff;
+
+      &:hover {
+        background-color: white;
+        color: $alpha;
+      }
+    }
+  }
+
+
+  &--text {
+
+    &-alpha {
+      background-color: #fff;
+      color: $alpha;
+    }
+
+    &-gray {
+      background-color: #fff;
+      color: $gray;
+    }
+  }
+
+  &--no-border {
+    border: none;
+  }
+
+
+  &__icon-center {
+    position: absolute;
+  }
+
+  &__icon-box {
+    font-size: $font-size-md;
+
+    position: absolute;
+  }
+
+  &__icon--left {
+    margin-left: $gutter-xs;
+  }
+}

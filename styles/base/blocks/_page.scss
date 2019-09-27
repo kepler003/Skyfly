@@ -1,0 +1,11 @@
+
+
+
+.page {
+  @include flex();
+  @include flex-pos(flex-start, flex-start, flex-start);
+
+  &--overflow {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,19 @@
+
+
+
+@mixin position($type, $up-or-down, $left-or-right){
+
+  position: $type;
+
+  @if $up-or-down == top {
+    top: 0;
+  } @else if $up-or-down == bottom {
+    bottom: 0;
+  }
+
+  @if $left-or-right == left {
+    left: 0;
+  } @else if $left-or-right == right {
+    right: 0;
+  }
+}

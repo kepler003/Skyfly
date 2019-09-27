@@ -1,0 +1,20 @@
+
+
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+
+@mixin up($width){
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin down($width){
+  @media (max-width: $width - 1px) {
+    @content;
+  }
+}

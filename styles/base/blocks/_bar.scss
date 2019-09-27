@@ -1,0 +1,12 @@
+
+
+
+.bar {
+  @include flex();
+
+  width: 100%;
+
+  &--center {
+    @include flex-pos();
+  }
+}

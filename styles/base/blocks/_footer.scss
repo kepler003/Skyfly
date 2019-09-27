@@ -1,0 +1,26 @@
+
+
+
+.footer {
+  @include flex();
+
+  width: 100%;
+
+  padding: $gutter;
+
+  background-color: $gray-3;
+  color: #fff;
+
+  &__info {
+    @include flex();
+    @include flex-pos();
+
+    width: 100%;
+
+    font-size: $font-size-sm;
+  }
+
+  &__copy {
+    margin-right: auto;
+  }
+}

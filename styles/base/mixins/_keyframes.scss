@@ -1,0 +1,18 @@
+
+
+
+@mixin animation($duration: 1s, $timing: ease-in-out, $delay: 0s, $iterations: infinite){
+
+  $name: #{unique-id()};
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-delay: $delay;
+  animation-iteration-count: $iterations;
+  animation-fill-mode: forwards;
+  
+  @keyframes #{$name}{
+    @content;
+  }
+}

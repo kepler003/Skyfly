@@ -1,0 +1,14 @@
+
+
+
+.image {
+
+  &-box {
+    @include flex();
+    @include flex-pos();
+
+    overflow: hidden;
+  }
+
+  width: 100%;
+}

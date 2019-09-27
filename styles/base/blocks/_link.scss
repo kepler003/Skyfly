@@ -1,0 +1,16 @@
+
+
+
+.link {
+
+  &--padding { padding: 0 $gutter-xs;}
+  &--white { color: white; }
+  &--small { font-size: $font-size-sm; }
+  &--opacity {
+    opacity: 0.8;
+    
+    transition: 250ms ease-in-out;
+
+    &:hover { opacity: 1; }
+  }
+}

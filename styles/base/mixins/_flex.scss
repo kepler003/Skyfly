@@ -1,0 +1,15 @@
+
+
+
+// Align children
+@mixin flex($direction: row, $wrapping: wrap){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrapping;
+}
+
+@mixin flex-pos($align-content: center, $align-items: center, $justify-content: center){
+  align-content: $align-content;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

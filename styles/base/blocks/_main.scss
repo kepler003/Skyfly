@@ -1,0 +1,9 @@
+
+
+
+.main {
+  @include flex();
+  @include flex-pos(flex-start, flex-start, null);
+  
+  width: 100%;
+}

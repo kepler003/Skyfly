@@ -1,0 +1,14 @@
+
+
+
+.m {
+  &-l { margin-left:   $gutter-xs; }
+  &-r { margin-right:  $gutter-xs; }
+  &-t { margin-top:    $gutter-xs; }
+  &-b { margin-bottom: $gutter-xs; }
+
+  &-h { margin: 0 $gutter-xs; }
+  &-v { margin: $gutter-xs  0; }
+
+  &-all { margin: $gutter-xs; }
+}

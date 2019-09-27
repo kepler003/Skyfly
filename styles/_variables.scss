@@ -1,0 +1,132 @@
+
+
+
+// Colors
+$alpha: #ffd073;
+$alpha-light-1: lighten($alpha, 5%);
+$alpha-light-2: lighten($alpha, 10%);
+$alpha-light-3: lighten($alpha, 15%);
+$alpha-light-4: lighten($alpha, 20%);
+$alpha-light-5: lighten($alpha, 25%);
+$alpha-dark-1:  darken($alpha, 5%);
+$alpha-dark-2:  darken($alpha, 10%);
+$alpha-dark-3:  darken($alpha, 15%);
+$alpha-dark-4:  darken($alpha, 20%);
+$alpha-dark-5:  darken($alpha, 25%);
+
+$beta: #FF9494;
+$beta-light-1: lighten($beta, 5%);
+$beta-light-2: lighten($beta, 10%);
+$beta-light-3: lighten($beta, 15%);
+$beta-light-4: lighten($beta, 20%);
+$beta-light-5: lighten($beta, 25%);
+$beta-dark-1:  darken($beta, 5%);
+$beta-dark-2:  darken($beta, 10%);
+$beta-dark-3:  darken($beta, 15%);
+$beta-dark-4:  darken($beta, 20%);
+$beta-dark-5:  darken($beta, 25%);
+
+$green: rgb(81, 219, 47);
+$green-light-1: lighten($green, 5%);
+$green-light-2: lighten($green, 10%);
+$green-light-3: lighten($green, 15%);
+$green-light-4: lighten($green, 20%);
+$green-light-5: lighten($green, 25%);
+$green-dark-1:  darken($green, 5%);
+$green-dark-2:  darken($green, 10%);
+$green-dark-3:  darken($green, 15%);
+$green-dark-4:  darken($green, 20%);
+$green-dark-5:  darken($green, 25%);
+
+// White
+$white: #fff;
+
+// Gray
+$gray-1: lighten(#000, 10%);
+$gray-2: lighten(#000, 20%);
+$gray-3: lighten(#000, 30%);
+$gray-4: lighten(#000, 40%);
+$gray-5: lighten(#000, 50%);
+$gray-6: lighten(#000, 60%);
+$gray-7: lighten(#000, 70%);
+$gray-8: lighten(#000, 80%);
+$gray-9: lighten(#000, 90%);
+$gray:   $gray-5;
+$dark:   $gray-2;
+
+// Black
+$black-1: rgba(0, 0, 0, 0.1);
+$black-2: rgba(0, 0, 0, 0.2);
+$black-3: rgba(0, 0, 0, 0.3);
+$black-4: rgba(0, 0, 0, 0.4);
+$black-5: rgba(0, 0, 0, 0.5);
+$black-6: rgba(0, 0, 0, 0.6);
+$black-7: rgba(0, 0, 0, 0.7);
+$black-8: rgba(0, 0, 0, 0.8);
+$black-9: rgba(0, 0, 0, 0.9);
+$black:   rgba(0, 0, 0, 1);
+
+
+
+// Gutter
+$gutter:     1.25em;
+$gutter-xs:  $gutter * 0.5;
+$gutter-sm:  $gutter * 0.75;
+$gutter-md:  $gutter * 1.5;
+$gutter-lg:  $gutter * 2;
+$gutter-xl:  $gutter * 3;
+$gutter-2xl: $gutter * 4;
+$gutter-3xl: $gutter * 5;
+$gutter-4xl: $gutter * 6;
+
+
+
+// Font main
+$font-size-main: 18px;
+$font-family:    'Quicksand', sans-serif;
+
+// Font sizes
+$font-size-xs:  $font-size-main * 0.6;
+$font-size-sm:  $font-size-main * 0.8;
+$font-size:     $font-size-main;
+$font-size-md:  $font-size-main * 1.2;
+$font-size-lg:  $font-size-main * 1.4;
+$font-size-xl:  $font-size-main * 1.6;
+$font-size-2xl: $font-size-main * 1.8;
+$font-size-3xl: $font-size-main * 2;
+$font-size-4xl: $font-size-main * 2.2;
+$font-size-5xl: $font-size-main * 2.4;
+$font-size-6xl: $font-size-main * 2.6;
+
+
+
+// Border color
+$border-alpha:      $alpha;
+$border-white:      #fff;
+$border-gray-light: $gray-8;
+$border-gray:       $gray-6;
+$border-gray-dark:  $gray-2;
+$border:  1px solid $border-gray;
+
+// Border radius
+$radius-xs:     3px;
+$radius-sm:     $font-size-main * 0.5;
+$radius:        $font-size-main;
+$radius-md:     $font-size-main * 1.5;
+$radius-lg:     $font-size-main * 3;
+$radius-xl:     $font-size-main * 6;
+$radius-circle: 10000px;
+
+
+
+// Shadows
+$box-shadow-xs: 0 ($font-size-xs / 2 - 3px)        $font-size * 0.4    $black-3;
+$box-shadow-sm: 0 ($font-size-sm / 1.5 - 3px)      $font-size-md * 0.6 $black-3;
+$box-shadow:    0 (($font-size / 1.2) * 0.8 - 3px) $font-size-lg * 0.8 $black-3;
+$box-shadow-md: 0 (($font-size-md / 1.2 - 3px))    $font-size-xl * 1   $black-3;
+$box-shadow-lg: 0 ($font-size-lg - 3px)            $font-size-2xl * 2  $black-3;
+
+
+
+// Standardize content max width for desktop
+$max-content: 1000px;
