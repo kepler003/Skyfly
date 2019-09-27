@@ -3,7 +3,7 @@
 
 .header {
   @include flex();
-  @include flex-pos();
-
+  @include flex-pos(flex-start, flex-start, flex-start);
+  
   width: 100%;
 }

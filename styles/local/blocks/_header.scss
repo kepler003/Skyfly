@@ -1,0 +1,57 @@
+
+
+
+.header {
+
+  padding: $gutter-xs;
+
+  background-color: $alpha;
+  background: linear-gradient(to right, $beta, $alpha);
+  color: #fff;
+
+  @include position(sticky, top, right);
+
+
+
+  &__photo-box {
+    width: 55px;
+    height: 55px;
+
+    margin-right: $gutter-sm;
+
+    border-radius: $radius-circle;
+
+    overflow: hidden;
+  }
+
+  &__photo {
+    width: 100%;
+  }
+
+  &__email {
+    font-size: $font-size-sm;
+    opacity: 0.75;
+  }
+
+  &__btn {
+
+    &--menu {
+      margin-left: auto;
+    }
+  }
+
+
+  
+  &__nav {
+    @include flex();
+    @include flex-pos();
+
+    width: 100%;
+
+    &--bottom {
+      background-color: $alpha;
+
+      @include position(fixed, bottom, right);
+    }
+  }
+}

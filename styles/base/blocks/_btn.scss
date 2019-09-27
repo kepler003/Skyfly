@@ -178,18 +178,24 @@
   &--text {
 
     &-alpha {
-      background-color: #fff;
       color: $alpha;
     }
 
     &-gray {
-      background-color: #fff;
       color: $gray;
+    }
+
+    &-white {
+      color: #fff;
     }
   }
 
   &--no-border {
     border: none;
+  }
+
+  &--no-radius {
+    border-radius: 0;
   }
 
 
