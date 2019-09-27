@@ -12,10 +12,6 @@
   color: #fff;
 
   &__info {
-    @include flex();
-    @include flex-pos();
-
-    width: 100%;
 
     font-size: $font-size-sm;
   }

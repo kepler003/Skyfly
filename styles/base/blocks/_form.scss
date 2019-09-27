@@ -2,10 +2,6 @@
 
 
 .form {
-  @include flex();
-  @include flex-pos();
-
-  width: 100%;
 
   &__group {
     @include flex();

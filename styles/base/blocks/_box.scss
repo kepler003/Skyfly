@@ -2,9 +2,15 @@
 
 
 .box {
+  @include flex();
+  width: 100%;
 
-  &--flex {
-    @include flex();
+  &--center {
+    @include flex-pos();
+  }
+
+  &--start {
+    @include flex-pos(flex-start, flex-start, flex-start);
   }
 
   &--desktop {
@@ -22,4 +28,5 @@
   &--center { @include flex-pos(); }
   &--x-center { justify-content: center; }
   &--y-center { @include flex-pos(null, null, flex-start); }
+  &--y-start { @include flex-pos(flex-start, flex-start, flex-start); }
 }
