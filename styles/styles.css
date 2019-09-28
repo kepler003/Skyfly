@@ -237,6 +237,23 @@ blockquote, q {
 }
 
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.625em 0.9375em;
   font-size: 18px;
   border: 1px solid transparent;
@@ -251,23 +268,6 @@ blockquote, q {
 }
 
 .btn--squared {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 39.6px;
   height: 39.6px;
   padding: 0;
@@ -275,23 +275,6 @@ blockquote, q {
 }
 
 .btn--circle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 39.6px;
   height: 39.6px;
   padding: 0;
@@ -525,16 +508,12 @@ blockquote, q {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100%;
   padding: 0.625em 0;
+}
+
+.form__label {
+  margin-bottom: 0.625em;
 }
 
 .form__control {
@@ -1050,6 +1029,29 @@ blockquote, q {
 .btn--more {
   margin-top: 1.25em;
   font-size: 14.4px;
+}
+
+.find {
+  background: url("../../../images/findcurve.svg");
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.find__heading {
+  color: #fff;
+}
+
+.find__group--at {
+  padding-top: 0;
+}
+
+.find__input {
+  border: none;
+}
+
+.find__label {
+  color: #fff;
 }
 
 .border {

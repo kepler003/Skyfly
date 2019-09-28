@@ -5,11 +5,14 @@
 
   &__group {
     @include flex();
-    @include flex-pos();
 
     width: 100%;
 
     padding: $gutter-xs 0;
+  }
+
+  &__label {
+    margin-bottom: $gutter-xs;
   }
 
   &__control {

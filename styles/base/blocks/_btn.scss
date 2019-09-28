@@ -2,6 +2,9 @@
 
 
 .btn {
+  @include flex();
+  @include flex-pos();
+  
   padding: $gutter-xs $gutter-sm;
 
   font-size: $font-size;
@@ -17,9 +20,6 @@
 
 
   &--squared {
-    @include flex();
-    @include flex-pos();
-
     width: $font-size-4xl;
     height: $font-size-4xl;
 
@@ -29,9 +29,6 @@
   }
 
   &--circle {
-    @include flex();
-    @include flex-pos();
-    
     width: $font-size-4xl;
     height: $font-size-4xl;
     
