@@ -1,0 +1,42 @@
+
+
+
+.carousel {
+  @include flex(row, nowrap);
+
+  padding-bottom: $gutter-xl;
+
+  overflow: hidden;
+
+  position: relative;
+
+  &__item {
+
+    min-width: 100%;
+
+    opacity: 0;
+
+    position: relative;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+
+
+  &__nav {
+    @include flex();
+    @include flex-pos(center, center, null);
+
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__btn--right {
+    margin-left: auto;
+  }
+}

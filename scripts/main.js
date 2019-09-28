@@ -200,7 +200,127 @@ function changeOutside(data){
 
 
 
-////////////////////////////////////////////////////////////// Header
+////////////////////////////////////////////////////////////// Carousel
+
+// Perform tasks when page loads
+$(document).ready(function(){
+  
+  // Prepare carousels
+  prepareCarousels();
+});
+
+$('.carousel__btn').click(function(){
+  
+  // Update carousel when carousel's nav btn clicked
+  updateCarouselOnNav({btn: $(this)});
+});
+
+
+
+// Prepare carousels
+function prepareCarousels(){
+  
+  // get carousels
+  let carousels = $('.carousel');
+  
+  // Stop function if no carousels on page
+  if(carousels.length == 0) return;
+  
+  // Loop through carousels
+  for(let i = 0; i < carousels.length; i++){
+
+    // Get singele carousel
+    let carousel = carousels[i];
+    
+    // Get single carousel's items
+    let items = $(carousel).children('.carousel__item');
+
+    // Go to next iteration if carousel has no items
+    if(items.length == 0) continue;
+
+    // Loop through items
+    for(let j = 0; j < items.length; j++){
+
+      // Get single item
+      let item = items[j];
+      
+      // Go to next iteration if item has proper index
+      if($(item).attr('data-index') == j) continue;
+      
+      // Give item a proper index
+      $(item).attr('data-index', j);
+
+      // Give class active if data-index = 0
+      if(j == 0) $(item).addClass('active');
+    };
+  };
+};
+
+// Update carousel when carousel's nav btn clicked
+function updateCarouselOnNav(data){
+
+  // Get difference
+  const dif = (function(){
+    if($(data.btn).hasClass('carousel__btn--right')) return -1;
+    if($(data.btn).hasClass('carousel__btn--left')) return 1;
+  })();
+
+  // Get carousel items
+  let items = $(data.btn).parents('.carousel').children('.carousel__item');
+
+  // Check if items is an empty array
+  if(items.length == 0) return;
+
+  // If clicked left check if first item in carousel is active
+  if(dif == 1 && $(items[0]).attr('data-index') == 0) return;
+  
+  // If clicked right check if last item in carousel is active
+  if(dif == -1 && $(items[items.length - 1]).attr('data-index') == 0) return;
+
+  // Loop through items
+  for(let i = 0; i < items.length; i++){
+
+    // Get single item
+    let item = items[i];
+
+    // Get item's index
+    const index = parseInt($(item).attr('data-index'), 10);
+    
+    // Change item's index
+    $(item).attr('data-index', index + dif);
+
+    // Update item's appearance
+    updateItem({
+      item: item,
+      dif: $(items[0]).attr('data-index'),
+      duration: parseInt($(data.btn).parents('.carousel').attr('data-duration'), 10)
+    });
+  };
+};
+
+// Update singe carousel item's appearance
+function updateItem(data){
+  
+  // Get item's index
+  const index = $(data.item).attr('data-index');
+  const width = $(data.item).outerWidth();
+  const duration = data.duration ? data.duration : 400;
+
+  // Give item proper opacity transition time and easing
+  $(data.item).css({
+    transition: 'opacity ' + duration + 'ms ease-in-out'
+  });
+
+  // Add/delete active class
+  if(index == 0) $(data.item).addClass('active');
+  if(index != 0) $(data.item).removeClass('active');
+
+  // Translate item
+  $(data.item).animate({
+    'left': (data.dif * width) + 'px'
+  }, data.duration ? data.duration : 400);
+};
+
 
 
 

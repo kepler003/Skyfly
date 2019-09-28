@@ -9,6 +9,8 @@
   background: linear-gradient(to right, $beta, $alpha);
   color: #fff;
 
+  z-index: 10;
+
   @include position(sticky, top, right);
 
 

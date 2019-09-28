@@ -7,11 +7,11 @@
 
 body {
 	font-size: $font-size-main;
-	color: $gray-3;
+	color: $gray-2;
 }
 
-a {
-	color: $gray-3;
+a, h1, h2, h3, h4, h5, h6 {
+	color: $gray-2;
 }
 
 html, body, div, span, applet, object, iframe,

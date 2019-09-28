@@ -1,0 +1,13 @@
+
+
+
+.scheduled {
+
+  &__info {
+    margin-top: $gutter-xs;
+
+    &--city { width: 100%; }
+
+    &--hour { margin-left: $gutter-sm; }
+  }
+}

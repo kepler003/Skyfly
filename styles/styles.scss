@@ -27,10 +27,16 @@
 @import './base/blocks/margin';
 @import './base/blocks/image';
 @import './base/blocks/modals';
+@import './base/blocks/carousel';
 
 
 // Local blocks
 @import './local/blocks/header';
+@import './local/blocks/main';
+@import './local/blocks/card';
+@import './local/blocks/user';
+@import './local/blocks/scheduled';
+@import './local/blocks/btn';
 
 
 

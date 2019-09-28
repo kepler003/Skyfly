@@ -7,6 +7,8 @@
     @include flex();
     @include flex-pos();
 
+    width: 100%;
+
     overflow: hidden;
   }
 

@@ -1,0 +1,31 @@
+
+
+
+.card {
+  @include flex();
+  @include flex-pos(flex-start, flex-start, flex-start);
+
+  width: 100%;
+
+  margin-top: $gutter;
+  padding: $gutter;
+
+  background-color: #fff;
+  border-radius: $radius-xs;
+  box-shadow: $box-shadow-sm;
+
+
+
+  &__header {
+    width: 100%;
+
+    margin-bottom: $gutter;
+    padding: $gutter-xs / 2 0;
+
+    font-size: $font-size;
+  }
+
+  &__heading {
+    font-size: $font-size-lg;
+  }
+}

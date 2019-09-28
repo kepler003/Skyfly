@@ -1,0 +1,23 @@
+
+
+
+.main {
+  padding: $gutter;
+
+
+
+  &__photo-box {
+    width: 55px;
+    height: 55px;
+
+    margin-right: $gutter-sm;
+
+    border-radius: $radius-circle;
+
+    overflow: hidden;
+  }
+
+  &__photo {
+    width: 100%;
+  }
+}

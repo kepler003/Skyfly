@@ -11,7 +11,7 @@
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
   <script src="./bower_components/validator-js/validator.min.js"></script>
 </head>
-<body class="box box--start">
+<body class="box box--start" style="padding-bottom: 100vh;">
 
   <!-- Header -->
   <header class="box header">
@@ -76,11 +76,111 @@
   </header>
 
   <!-- Main -->
-  <main class="main">
+  <main class="box box--start   main">
 
-    <article class="article">
+    <!-- Basic info -->
+    <header class="card user">
 
-      
+      <!-- User photo -->
+      <div class="main__photo-box">
+        <img src="./images/man.jpg" alt="Passenger's photo" class="main__photo">
+      </div>
+
+      <!-- User name & email -->
+      <div>
+        <p class="user__name">John Doe</p>
+        <p class="user__email">john.doe@gmail.com</p>
+      </div>
+
+      <!-- Menu btn -->
+      <button type="button" class="btn btn--squared btn--text-alpha user__btn--menu">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+
+    </header>
+
+    <!-- Scheduled flights -->
+    <article class="card scheduled">
+
+      <!-- Header -->
+      <header class="card__header">
+        <h2 class="card__heading">Scheduled flights</h2>
+      </header>
+
+      <!-- Flights carousel -->
+      <div class="carousel">
+
+        <!-- New York -->
+        <div class="carousel__item   box   scheduled__card">
+
+          <div class="image-box">
+            <img src="./images/newyork.jpg" alt="Obraz Free-Photos z Pixabay" class="image">
+          </div>
+          
+          <p class="scheduled__info scheduled__info--city"><i class="fas fa-city text--alpha"></i> to: <b>New York</b></p>
+          <p class="scheduled__info"><i class="fas fa-calendar-alt text--alpha"></i> 22 Dec 2019</p>
+          <p class="scheduled__info scheduled__info--hour"><i class="fas fa-clock text--alpha"></i> 6pm</p>
+
+          <button type="button" class="btn btn--trans btn--no-padding btn--margin-l btn--more">details <i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <!-- Oslo -->
+        <div class="carousel__item   box   scheduled__card">
+
+          <div class="image-box">
+            <img src="./images/oslo.jpg" alt="Obraz Free-Photos z Pixabay" class="image">
+          </div>
+          
+          <p class="scheduled__info scheduled__info--city"><i class="fas fa-city text--alpha"></i> to: <b>Oslo</b></p>
+          <p class="scheduled__info"><i class="fas fa-calendar-alt text--alpha"></i> 05 Jan 2020</p>
+          <p class="scheduled__info scheduled__info--hour"><i class="fas fa-clock text--alpha"></i> 2pm</p>
+
+          <button type="button" class="btn btn--trans btn--no-padding btn--margin-l btn--more">details <i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <!-- Dublin -->
+        <div class="carousel__item   box   scheduled__card">
+
+          <div class="image-box">
+            <img src="./images/dublin.jpg" alt="Obraz Free-Photos z Pixabay" class="image">
+          </div>
+          
+          <p class="scheduled__info scheduled__info--city"><i class="fas fa-city text--alpha"></i> to: <b>Dublin</b></p>
+          <p class="scheduled__info"><i class="fas fa-calendar-alt text--alpha"></i> 10 Feb 2020</p>
+          <p class="scheduled__info scheduled__info--hour"><i class="fas fa-clock text--alpha"></i> 10am</p>
+
+          <button type="button" class="btn btn--trans btn--no-padding btn--margin-l btn--more">details <i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <!-- Split -->
+        <div class="carousel__item   box   scheduled__card">
+
+          <div class="image-box">
+            <img src="./images/split.jpg" alt="Obraz Free-Photos z Pixabay" class="image">
+          </div>
+          
+          <p class="scheduled__info scheduled__info--city"><i class="fas fa-city text--alpha"></i> to: <b>Split</b></p>
+          <p class="scheduled__info"><i class="fas fa-calendar-alt text--alpha"></i> 15 Apr 2020</p>
+          <p class="scheduled__info scheduled__info--hour"><i class="fas fa-clock text--alpha"></i> 11pm</p>
+
+          <button type="button" class="btn btn--trans btn--no-padding btn--margin-l btn--more">details <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Carousel nav -->
+        <div class="carousel__nav">
+
+          <button type="button" class="btn btn--circle btn--outline-alpha   carousel__btn carousel__btn--left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <button type="button" class="btn btn--circle btn--outline-alpha   carousel__btn carousel__btn--right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+        </div>
+      </div>
+
+      <a href="#" class="btn btn--trans btn--no-padding btn--margin-h btn--more">see more <i class="fas fa-chevron-right"></i></a>
 
     </article>
 

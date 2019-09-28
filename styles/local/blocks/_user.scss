@@ -1,0 +1,25 @@
+
+
+
+.user {
+
+  margin-top: 0;
+
+  position: relative;
+
+  &__name {
+    color: $alpha;
+  }
+
+  &__email {
+    font-size: $font-size-sm;
+    opacity: 0.4;
+  }
+
+  &__btn {
+
+    &--menu {
+      @include position(absolute, top, right);
+    }
+  }
+}
