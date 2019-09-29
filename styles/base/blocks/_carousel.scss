@@ -38,5 +38,31 @@
 
   &__btn--right {
     margin-left: auto;
+  };
+
+  &__dots {
+    @include flex();
+    @include flex-pos();
+
+    flex-grow: 1;
+
+    padding: 0 $gutter-sm;
+  }
+
+  &__dot {
+    width: 17px;
+    height: 17px;
+
+    margin: 0 $gutter-xs / 3;
+
+    background-color: transparent;
+    border: 2px solid $alpha;
+    border-radius: $radius-circle;
+
+    &:hover { box-shadow: $box-shadow; }
+
+    &.active {
+      background-color: $alpha;
+    }
   }
 }

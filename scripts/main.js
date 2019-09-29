@@ -209,10 +209,17 @@ $(document).ready(function(){
   prepareCarousels();
 });
 
+// Update carousel when nav btn clicked
 $('.carousel__btn').click(function(){
   
   // Update carousel when carousel's nav btn clicked
   updateCarouselOnNav({btn: $(this)});
+});
+
+// Update carousel when nav dot clicked
+$(document).on('click', '.carousel__dot', function(e){
+
+  updateCarouselOnDot({ dot: $(this) });
 });
 
 
@@ -220,7 +227,7 @@ $('.carousel__btn').click(function(){
 // Prepare carousels
 function prepareCarousels(){
   
-  // get carousels
+  // Get carousels
   let carousels = $('.carousel');
   
   // Stop function if no carousels on page
@@ -243,20 +250,26 @@ function prepareCarousels(){
 
       // Get single item
       let item = items[j];
-      
-      // Go to next iteration if item has proper index
-      if($(item).attr('data-index') == j) continue;
-      
-      // Give item a proper index
-      $(item).attr('data-index', j);
+        
+      // Find carousel dots box
+      let dots = $(carousel).find('.carousel__dots');
 
-      // Give class active if data-index = 0
-      if(j == 0) $(item).addClass('active');
+      // Prepare item
+      prepareItem({
+        item: item,
+        index: j
+      });
+
+      // Prepare carousel dots
+      prepareDots({
+        dots: dots,
+        index: j
+      });
     };
   };
 };
 
-// Update carousel when carousel's nav btn clicked
+// Update carousel when nav btn clicked
 function updateCarouselOnNav(data){
 
   // Get difference
@@ -283,43 +296,139 @@ function updateCarouselOnNav(data){
     // Get single item
     let item = items[i];
 
-    // Get item's index
-    const index = parseInt($(item).attr('data-index'), 10);
-    
-    // Change item's index
-    $(item).attr('data-index', index + dif);
+    let dot = ($(data.btn).parents('.carousel').find('.carousel__dot'))[i];
 
-    // Update item's appearance
+    // Update item
     updateItem({
       item: item,
-      dif: $(items[0]).attr('data-index'),
+      dif: dif,
       duration: parseInt($(data.btn).parents('.carousel').attr('data-duration'), 10)
+    });
+
+    // Update dots
+    updateDot({
+      dot: dot,
+      dif: dif,
+      firstIndex: $(items[0]).attr('data-index')
     });
   };
 };
 
-// Update singe carousel item's appearance
+// Update carousel when nav dot clicked
+function updateCarouselOnDot(data){
+
+  // Stop function if active dot was clicked
+  if($(data.dot).hasClass('active')) return;
+
+  // Get data
+  const index = parseInt($(data.dot).attr('data-index'), 10);
+  const carousel = $(data.dot).parents('.carousel');
+  const items = $(carousel).find('.carousel__item');
+  const dots = $(carousel).find('.carousel__dot');
+  const oldIndex = parseInt(
+    $(carousel)
+    .find('.carousel__dots')
+    .find('.active')
+    .attr('data-index')
+    , 10);
+  const dif = oldIndex - index;
+  const duration = $(carousel).attr('data-duration') ? $(carousel).attr('data-duration') : 400;
+  
+  for(let i = 0; i < items.length; i++){
+
+    let item = items[i];
+    let dot = dots[i];
+
+    updateItem({
+      item: item,
+      dif: dif,
+      duration: duration
+    });
+
+    updateDot({
+      dot: dot,
+      dif: dif
+    });
+  };
+};
+
+// Prepare item
+function prepareItem(data){
+
+  // Go to next iteration if item has proper index
+  if($(data.item).attr('data-index') == data.index) return;
+  
+  // Give item a proper index
+  $(data.item).attr('data-index', data.index);
+
+  // Give item an active class if data-index == 0
+  if(data.index == 0) $(data.item).addClass('active');
+};
+
+// Prepare carousel dots
+function prepareDots(data){
+
+  // Create dot
+  let dot = $('<button type="button" class="carousel__dot" data-index="' + data.index + '"></button>');
+
+  // Add carousel dots
+  if(data.dots) $(data.dots).append(dot);
+
+  // If index == 0 add active class
+  if(data.index == 0) $(dot).addClass('active');
+};
+
+// Update singe carousel item's appearance /* item, dif, duration */
 function updateItem(data){
   
-  // Get item's index
-  const index = $(data.item).attr('data-index');
+  // Get data
+  const index = parseInt($(data.item).attr('data-index'), 10);
   const width = $(data.item).outerWidth();
   const duration = data.duration ? data.duration : 400;
+  const items = $(data.item).parent().children('.carousel__item');
+  const newIndex = index + data.dif;
 
   // Give item proper opacity transition time and easing
   $(data.item).css({
     transition: 'opacity ' + duration + 'ms ease-in-out'
   });
 
+  // Update index
+  $(data.item).attr('data-index', index + data.dif);
+  
+  // Get first item's index
+  const firstIndex = parseInt($(items[0]).attr('data-index'), 10);
+
   // Add/delete active class
-  if(index == 0) $(data.item).addClass('active');
-  if(index != 0) $(data.item).removeClass('active');
+  if(newIndex == 0) $(data.item).addClass('active');
+  if(newIndex != 0) $(data.item).removeClass('active');
 
   // Translate item
   $(data.item).animate({
-    'left': (data.dif * width) + 'px'
+    'left': (firstIndex * width) + 'px'
   }, data.duration ? data.duration : 400);
 };
+
+// Update dots /* dot, dif */
+function updateDot(data){
+
+  // Get data
+  const index = parseInt($(data.dot).attr('data-index'), 10);
+  const newIndex = index + data.dif;
+
+  // Give dot a proper opacity transition time and easing
+  $(data.dot).css({
+    transition: '150ms ease-in-out'
+  });
+
+  // Update index
+  $(data.dot).attr('data-index', newIndex);
+
+  // Add/delete active class
+  if(newIndex == 0) $(data.dot).addClass('active');
+  if(newIndex != 0) $(data.dot).removeClass('active');
+};
+
 
 
 
