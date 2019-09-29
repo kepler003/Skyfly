@@ -1,0 +1,43 @@
+
+
+
+.rent {
+  @include flex(column, nowrap);
+  @include flex-pos();
+  
+  padding: 0;
+  padding-bottom: $gutter-sm;
+
+  background-color: #fff;
+  background: url('../../../images/rentcurve.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+
+
+
+  &__heading {
+    padding: $gutter-xs;
+
+    color: #fff;
+  }
+
+
+  &__para {
+    width: 100%;
+    padding-left: $gutter;
+
+    &--top {
+      margin-top: $gutter;
+    }
+  }
+
+  &__photo {
+    margin-left: auto;
+  }
+
+  &__more {
+    margin-top: $gutter;
+    margin-right: $gutter;
+  }
+}
