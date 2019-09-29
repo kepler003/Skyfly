@@ -59,7 +59,7 @@
     border: 2px solid $alpha;
     border-radius: $radius-circle;
 
-    &:hover { box-shadow: $box-shadow; }
+    &:hover { box-shadow: $box-shadow-sm; }
 
     &.active {
       background-color: $alpha;

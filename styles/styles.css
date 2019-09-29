@@ -912,8 +912,8 @@ blockquote, q {
 }
 
 .carousel__dot:hover {
-  -webkit-box-shadow: 0 9px 20.16px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 9px 20.16px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 6.6px 12.96px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6.6px 12.96px rgba(0, 0, 0, 0.3);
 }
 
 .carousel__dot.active {

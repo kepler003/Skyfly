@@ -365,7 +365,7 @@ function prepareItem(data){
   if(data.index == 0) $(data.item).addClass('active');
 };
 
-// Prepare carousel dots
+// Prepare dots
 function prepareDots(data){
 
   // Create dot
@@ -378,7 +378,7 @@ function prepareDots(data){
   if(data.index == 0) $(dot).addClass('active');
 };
 
-// Update singe carousel item's appearance /* item, dif, duration */
+// Update item /* item, dif, duration */
 function updateItem(data){
   
   // Get data
