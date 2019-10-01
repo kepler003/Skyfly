@@ -1124,6 +1124,10 @@ blockquote, q {
   color: #fff;
 }
 
+.find__all-flights {
+  margin-top: 1.25em;
+}
+
 .discover {
   padding: 0;
   overflow: hidden;
