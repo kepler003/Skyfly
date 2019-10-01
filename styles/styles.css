@@ -902,11 +902,14 @@ blockquote, q {
   background-color: transparent;
   border: 2px solid #0690C4;
   border-radius: 10000px;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
 .carousel__dot:hover {
-  -webkit-box-shadow: 0 6.6px 12.96px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 6.6px 12.96px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px #011117;
+          box-shadow: 0 0 3px #011117;
 }
 
 .carousel__dot.active {
