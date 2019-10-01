@@ -63,7 +63,7 @@
   
   .header {
     @include flex-pos(flex-start, flex-start, center);
-    width: 250px;
+    width: 230px;
     height: 100%;
 
     background: linear-gradient(to bottom right, $beta, $alpha);

@@ -31,7 +31,7 @@
 @include up($md){
 
   .main {
-    width: calc(100% - 250px);
+    width: calc(100% - 220px);
     margin-left: auto;
   }
 }
@@ -50,5 +50,6 @@
 
   .main {
     padding: $gutter $gutter-xl;
+    grid-gap: $gutter-md;
   }
 }

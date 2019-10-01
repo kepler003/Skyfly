@@ -22,10 +22,21 @@
     padding-top: 0;
   }
 
+
+
   &__photo {
     width: 100%;
   }
 
+  &__photo-box {
+    @include flex();
+    @include flex-pos();
+
+    max-height: 350px;
+  }
+
+
+  
   &__info {
     @include flex(column, nowrap);
 

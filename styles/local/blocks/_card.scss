@@ -20,7 +20,7 @@
     width: 100%;
 
     margin-bottom: $gutter;
-    padding: $gutter-xs / 2 0;
+    padding: $gutter-xs 0;
 
     font-size: $font-size;
   }
@@ -40,6 +40,16 @@
 }
 
 
+
+@include up($md){
+
+  .card {
+
+    &__header {
+      padding: $gutter-sm 0;
+    }
+  }
+}
 
 @include up($lg){
 

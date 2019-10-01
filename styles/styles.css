@@ -985,7 +985,7 @@ blockquote, q {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 250px;
+    width: 230px;
     height: 100%;
     background: -webkit-gradient(linear, left top, right bottom, from(#5AD1FF), to(#0690C4));
     background: linear-gradient(to bottom right, #5AD1FF, #0690C4);
@@ -1027,7 +1027,7 @@ blockquote, q {
 
 @media (min-width: 768px) {
   .main {
-    width: calc(100% - 250px);
+    width: calc(100% - 220px);
     margin-left: auto;
   }
 }
@@ -1047,6 +1047,7 @@ blockquote, q {
 @media (min-width: 1200px) {
   .main {
     padding: 1.25em 3.75em;
+    grid-gap: 1.875em;
   }
 }
 
@@ -1080,7 +1081,7 @@ blockquote, q {
 .card__header {
   width: 100%;
   margin-bottom: 1.25em;
-  padding: 0.3125em 0;
+  padding: 0.625em 0;
   font-size: 18px;
 }
 
@@ -1107,6 +1108,12 @@ blockquote, q {
       -ms-flex-pack: center;
           justify-content: center;
   max-height: 250px;
+}
+
+@media (min-width: 768px) {
+  .card__header {
+    padding: 0.9375em 0;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1232,6 +1239,11 @@ blockquote, q {
   margin-left: 14.4px;
 }
 
+.btn--more-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .find {
   background: url("../../../images/findcurve.svg");
   background-position: 0 0;
@@ -1291,6 +1303,27 @@ blockquote, q {
 
 .discover__photo {
   width: 100%;
+}
+
+.discover__photo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 350px;
 }
 
 .discover__info {
@@ -1422,9 +1455,12 @@ blockquote, q {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   padding: 0;
-  padding-bottom: 0.9375em;
-  background-color: #fff;
-  background: left top/100% 77.76px no-repeat url("../../../images/rentcurve.svg");
+  padding-bottom: 1.25em;
+}
+
+.rent__header {
+  background: -webkit-gradient(linear, left top, right bottom, from(#5AD1FF), to(#0690C4));
+  background: linear-gradient(to bottom right, #5AD1FF, #0690C4);
 }
 
 .rent__heading {
@@ -1441,12 +1477,16 @@ blockquote, q {
   margin-top: 1.25em;
 }
 
+.rent__para--gutter {
+  margin-bottom: 1.25em;
+}
+
 .rent__photo {
   margin-left: auto;
 }
 
 .rent__more {
-  margin-top: 1.25em;
+  margin-top: auto;
   margin-right: 1.25em;
 }
 
@@ -1471,7 +1511,7 @@ blockquote, q {
 }
 
 .friends__photo-box:not(:first-child) {
-  margin-left: -30px;
+  margin-left: -15%;
 }
 
 .friends__photo {
@@ -1481,6 +1521,10 @@ blockquote, q {
 .friends__cto {
   margin: 1.25em auto;
   text-align: center;
+}
+
+.friends__more {
+  margin-top: auto;
 }
 
 .weather__city-box {

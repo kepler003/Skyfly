@@ -6,12 +6,13 @@
   @include flex(column, nowrap);
   
   padding: 0;
-  padding-bottom: $gutter-sm;
-
-  background-color: #fff;
-  background: left top / 100% $font-size-5xl * 1.8 no-repeat url('../../../images/rentcurve.svg');
+  padding-bottom: $gutter;
 
 
+
+  &__header {
+    background: linear-gradient(to bottom right, $beta, $alpha);
+  }
 
   &__heading {
     padding: $gutter-xs;
@@ -27,6 +28,10 @@
     &--top {
       margin-top: $gutter;
     }
+
+    &--gutter {
+      margin-bottom: $gutter;
+    }
   }
 
   &__photo {
@@ -34,7 +39,7 @@
   }
 
   &__more {
-    margin-top: $gutter;
+    margin-top: auto;
     margin-right: $gutter;
   }
 }
