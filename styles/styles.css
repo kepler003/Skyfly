@@ -1350,6 +1350,10 @@ blockquote, q {
   margin-left: 0.9375em;
 }
 
+.footer {
+  min-height: 300px;
+}
+
 .border {
   border: 1px solid red;
 }
