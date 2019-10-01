@@ -11,10 +11,6 @@
     border: 4px solid #fff;
 
     overflow: hidden;
-
-    &:not(:first-child) {
-      margin-left: -15%;
-    }
   }
 
   &__photo {
@@ -24,12 +20,7 @@
 
   
   &__cto {
-    margin: $gutter auto;
+    margin: $gutter-lg auto;
     text-align: center;
-  }
-
-
-  &__more {
-    margin-top: auto;
   }
 }

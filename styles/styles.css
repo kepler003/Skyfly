@@ -1010,7 +1010,7 @@ blockquote, q {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1.25em;
-  background-color: #f3fbff;
+  background-color: #f8fdff;
 }
 
 .main__photo-box {
@@ -1223,6 +1223,7 @@ blockquote, q {
   margin-left: auto;
   background-color: transparent;
   font-size: 14.4px;
+  line-height: 14.4px;
 }
 
 .btn--more i {
@@ -1490,6 +1491,12 @@ blockquote, q {
   margin-right: 1.25em;
 }
 
+@media (min-width: 992px) {
+  .rent__header {
+    padding: 1.25em 0.625em;
+  }
+}
+
 .friends {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1510,21 +1517,25 @@ blockquote, q {
   overflow: hidden;
 }
 
-.friends__photo-box:not(:first-child) {
-  margin-left: -15%;
-}
-
 .friends__photo {
   width: 100%;
 }
 
 .friends__cto {
-  margin: 1.25em auto;
+  margin: 2.5em auto;
   text-align: center;
 }
 
-.friends__more {
-  margin-top: auto;
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .weather__city-box {
@@ -1542,6 +1553,14 @@ blockquote, q {
 
 .weather__status {
   margin-left: 0.9375em;
+}
+
+.weather__status-box {
+  margin-bottom: 1.25em;
+}
+
+.weather__more {
+  margin-top: auto;
 }
 
 .footer {

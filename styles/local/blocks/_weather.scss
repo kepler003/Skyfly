@@ -2,7 +2,7 @@
 
 
 .weather {
-
+  @include flex(column, nowrap);
 
 
   &__city-box {
@@ -21,4 +21,11 @@
 
 
   &__status { margin-left: $gutter-sm; }
+  &__status-box { margin-bottom: $gutter; }
+
+
+
+  &__more {
+    margin-top: auto;
+  }
 }
