@@ -57,3 +57,29 @@
     }
   }
 }
+
+
+
+@include up($md){
+  
+  .header {
+    @include flex-pos(flex-start, flex-start, center);
+    width: 250px;
+    height: 100%;
+
+    background: linear-gradient(to bottom right, $beta, $alpha);
+
+    z-index: 10;
+
+    @include position(fixed, top, left);
+
+
+
+    &__nav {
+
+      &--bottom {
+        display: none;
+      }
+    }
+  }
+}
