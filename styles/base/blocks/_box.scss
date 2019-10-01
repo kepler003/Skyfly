@@ -21,12 +21,10 @@
     margin: 0 auto;
   }
 
-  &--row { flex-direction: row; }
   &--column { flex-direction: column; }
   &--nowrap { flex-wrap: nowrap; }
-  &--wrap { flex-wrap: wrap; }
   &--center { @include flex-pos(); }
   &--x-center { justify-content: center; }
-  &--y-center { @include flex-pos(null, null, flex-start); }
+  &--y-center { @include flex-pos(center, center, flex-start); }
   &--y-start { @include flex-pos(flex-start, flex-start, flex-start); }
 }
