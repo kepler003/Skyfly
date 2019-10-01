@@ -3,11 +3,6 @@
 
 
 
-  &__photos {
-    @include flex(row, nowrap);
-    @include flex-pos();
-  }
-
   &__photo-box {
     width: 70px;
     height: 70px;
@@ -29,6 +24,7 @@
 
   
   &__cto {
-    margin: $gutter 0;
+    margin: $gutter auto;
+    text-align: center;
   }
 }
