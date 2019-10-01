@@ -2,8 +2,8 @@
 
 
 .rent {
+  
   @include flex(column, nowrap);
-  @include flex-pos();
   
   padding: 0;
   padding-bottom: $gutter-sm;

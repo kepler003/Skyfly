@@ -32,3 +32,12 @@
     margin-top: $gutter;
   }
 }
+
+
+
+@include up($lg){
+
+  .find {
+    grid-column: 3
+  }
+}

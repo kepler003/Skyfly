@@ -18,3 +18,12 @@
     &--hour { margin-left: $gutter-sm; }
   }
 }
+
+
+
+@include up($lg){
+
+  .scheduled {
+    grid-column: 1 / span 2;
+  }
+}

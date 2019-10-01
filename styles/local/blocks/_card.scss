@@ -12,7 +12,7 @@
 
   background-color: #fff;
   border-radius: $radius-xs;
-  box-shadow: $box-shadow-sm;
+  box-shadow: $box-shadow-xs;
 
 
 
@@ -36,5 +36,14 @@
     @include flex-pos();
 
     max-height: 250px;
+  }
+}
+
+
+
+@include up($lg){
+
+  .card {
+    margin-top: 0;
   }
 }

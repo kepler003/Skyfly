@@ -2,6 +2,7 @@
 
 
 .news {
+  
   @include flex-pos(stretch, stretch, center);
 
   padding-bottom: 0;
@@ -39,5 +40,12 @@
       padding-bottom: 0;
       padding-right: $gutter;
     }
+  }
+}
+
+@include up($lg){
+  
+  .news {
+    grid-column: 1 / span 3;
   }
 }

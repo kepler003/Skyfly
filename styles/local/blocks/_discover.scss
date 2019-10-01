@@ -2,6 +2,8 @@
 
 
 .discover {
+  grid-column: 1 / span 4;
+  
   padding: 0;
 
   overflow: hidden;
@@ -86,5 +88,12 @@
       bottom: $gutter-xl;
       right: $gutter-xl;
     }
+  }
+}
+
+@include up($lg){
+  
+  .discover {
+    grid-column: 1 / span 3;
   }
 }

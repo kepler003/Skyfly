@@ -2,7 +2,11 @@
 
 
 .main {
+  @include flex();
+  
   padding: $gutter;
+
+  background-color: lighten($alpha, 58%);
 
 
 
@@ -29,5 +33,22 @@
   .main {
     width: calc(100% - 250px);
     margin-left: auto;
+  }
+}
+
+@include up($lg){
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: $gutter;
+  }
+}
+
+@include up($xl){
+
+  .main {
+    padding: $gutter $gutter-xl;
   }
 }

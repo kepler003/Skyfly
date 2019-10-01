@@ -2,10 +2,12 @@
 
 
 .user {
+  grid-column: 1 / span 3;
 
   margin-top: 0;
 
   position: relative;
+
 
   &__name {
     color: $alpha;
@@ -21,5 +23,25 @@
     &--menu {
       @include position(absolute, top, right);
     }
+  }
+}
+
+
+
+@include up($sm){
+
+  .user {
+
+    &__btn--menu {
+      top: $gutter-xs;
+      right: $gutter-xs;
+    }
+  }
+}
+
+@include up($lg){
+  
+  .user {
+    grid-column: 1 / -1;
   }
 }
