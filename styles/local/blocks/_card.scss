@@ -28,4 +28,13 @@
   &__heading {
     font-size: $font-size-lg;
   }
+
+
+
+  &__photo-box {
+    @include flex();
+    @include flex-pos();
+
+    max-height: 250px;
+  }
 }

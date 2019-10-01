@@ -3,6 +3,13 @@
 
 .scheduled {
 
+  &__photo-box {
+    @include flex();
+    @include flex-pos();
+
+    max-height: 250px;
+  }
+
   &__info {
     margin-top: $gutter-xs;
 
