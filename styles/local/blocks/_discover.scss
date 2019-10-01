@@ -57,3 +57,34 @@
     right: $gutter;
   }
 }
+
+
+
+@include up($sm){
+
+  .discover {
+
+    &__info {
+      top: $gutter-xl;
+      left: $gutter-xl;
+    }
+      
+    &__city {
+      font-size: $font-size-5xl;
+    }
+
+    &__price {
+      margin-top: $gutter;
+
+      font-size: $font-size;
+      font-weight: 400;
+    }
+
+
+
+    &__more {
+      bottom: $gutter-xl;
+      right: $gutter-xl;
+    }
+  }
+}

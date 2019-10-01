@@ -1219,6 +1219,25 @@ blockquote, q {
   right: 1.25em;
 }
 
+@media (min-width: 576px) {
+  .discover__info {
+    top: 3.75em;
+    left: 3.75em;
+  }
+  .discover__city {
+    font-size: 43.2px;
+  }
+  .discover__price {
+    margin-top: 1.25em;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .discover__more {
+    bottom: 3.75em;
+    right: 3.75em;
+  }
+}
+
 .news {
   -ms-flex-line-pack: stretch;
       align-content: stretch;
