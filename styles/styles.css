@@ -1341,7 +1341,7 @@ blockquote, q {
 
 .find {
   background-color: #0690C4;
-  background: url("../../../images/findcurve.svg") #fff;
+  background: url("./../../../images/findcurve.svg") #fff;
   background-position: 0 0;
   background-size: contain;
   background-repeat: no-repeat;
