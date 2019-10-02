@@ -1573,6 +1573,10 @@ blockquote, q {
   margin-top: 1.25em;
 }
 
+.rent__para--bottom {
+  margin-bottom: 1.25em;
+}
+
 .rent__para--gutter {
   margin-bottom: 1.25em;
 }
