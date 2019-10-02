@@ -1,18 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="317.501" height="298.278" viewBox="0 0 317.501 298.278">
-  <defs>
-    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#5ad1ff"/>
-      <stop offset="1" stop-color="#0690c4"/>
-    </linearGradient>
-    <filter id="Subtraction_2" x="0" y="0" width="317.501" height="298.278" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Subtraction_2)">
-    <path id="Subtraction_2-2" data-name="Subtraction 2" d="M115.722,308.278c-.762,0-1.489-.026-2.222-.078V31.65c.572-2.163.891-3.326.894-3.337L413,28a.069.069,0,0,1,0,.018c0,.49-.027,3.143-.428,7.247a126.141,126.141,0,0,1-3.194,18.25,116.157,116.157,0,0,1-8.829,23.92,94.974,94.974,0,0,1-17.333,24.276c-18.794,18.912-45.249,28.5-78.628,28.5-56.331,0-83.185,28.147-95.793,51.76a124.333,124.333,0,0,0-12.185,35.585,104.81,104.81,0,0,0-1.821,16.175,75.946,75.946,0,0,1-1.378,11.648,94.679,94.679,0,0,1-3.059,11.939A84.794,84.794,0,0,1,184.527,271a67.559,67.559,0,0,1-23.521,25.625,71.591,71.591,0,0,1-19.476,8.445A98.642,98.642,0,0,1,115.722,308.278Z" transform="translate(-104.5 -22)" fill="url(#linear-gradient)"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="244" height="141" viewBox="0 0 244 141">
+  <rect id="Rectangle_52" data-name="Rectangle 52" width="244" height="141" fill="#0690c4"/>
 </svg>
