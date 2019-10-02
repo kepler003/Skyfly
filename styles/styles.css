@@ -1261,10 +1261,21 @@ blockquote, q {
 
 .scheduled__info--city {
   width: 100%;
+  font-size: 21.6px;
+  font-weight: 700;
+}
+
+.scheduled__info--date {
+  opacity: 0.6;
+}
+
+.scheduled__info--date::after {
+  content: ",";
 }
 
 .scheduled__info--hour {
-  margin-left: 0.9375em;
+  margin-left: 0.625em;
+  opacity: 0.6;
 }
 
 @media (min-width: 992px) {
