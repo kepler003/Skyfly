@@ -432,6 +432,72 @@ function updateDot(data){
 
 
 
+////////////////////////////////////////////////////////////// Demo
+
+// Demo open btn clicked
+$('.js-demo-open').click(function(){
+
+  // Open demo
+  openDemo();
+});
+
+// Open demo box
+function openDemo(){
+  let demo = $('.demo__box');
+  $(demo).addClass('active');
+
+  closeDemoDelay();
+};
+
+// Close demo box
+function closeDemo(){
+  let demo = $('.demo__box');
+  $(demo).removeClass('active');
+};
+
+// Close timeout
+function closeDemoDelay(){
+
+  // Set variables
+  let duration = 15000;
+  let time = Date.now();
+  let elapsed = 0;
+  let step = 15;
+
+  // Create interval
+  let demoInterval = setInterval(function(){
+
+    // Act if time passed
+    if(elapsed >= 1){
+
+      // Clear interval
+      elapsed = 1;
+      clearInterval(demoInterval);
+
+      // Close demo
+      closeDemo();
+    };
+    
+    // Update elapsed variable
+    elapsed = (Date.now() - time) / duration;
+
+    // Update time line
+    updateTimeLine({elapsed: elapsed});
+  }, step);
+
+  // Close if close btn clicked
+  $('.js-demo-close').click(function(){
+    elapsed = 1;
+  });
+};
+
+// Update time line
+function updateTimeLine(data){
+  $('.demo__time').css('width', (100 - (data.elapsed * 100)) + '%');
+};
+
+
+
 
 
 

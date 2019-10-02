@@ -1,0 +1,64 @@
+
+
+
+.demo {
+
+  &__box {
+    @include flex();
+
+    width: calc(100% - 40px);
+    max-width: 400px;
+    min-height: 100px;
+
+    margin: 0 auto;
+    padding: $gutter;
+    padding-bottom: $gutter-md;
+
+    background-color: #fff;
+    border-radius: $radius-xs * 2;
+    box-shadow: $box-shadow-xs;
+    opacity: 0;
+
+    transform: translate(-50%, -120%);
+    z-index: 1000;
+    transition: 400ms ease-in-out;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    &.active {
+      opacity: 1;
+      transform: translate(-50%, $gutter-lg);
+    }
+  }
+
+  &__header {
+    width: 100%;
+
+    margin-bottom: $gutter-sm;
+
+    position: relative;
+  }
+
+  &__link {
+    color: $alpha;
+  }
+
+  &__para {
+
+    &--eng { margin-top: $gutter-sm; }
+  }
+
+
+
+  &__time {
+    width: 100%;
+    height: 5px;
+
+    background-color: $alpha;
+
+    @include position(absolute, bottom, left);
+  }
+}
