@@ -17,6 +17,7 @@
 
   &__control {
     width: 100%;
+    height: $font-size-3xl;
 
     padding: $gutter-xs / 2 $gutter-xs;
 
@@ -25,13 +26,18 @@
     border: $border;
     border-radius: $radius-circle;
     box-shadow: $box-shadow-xs;
+    line-height: $font-size;
 
     &--textarea {
+      height: auto;
       border-radius: $radius;
     }
 
     &--range {
+      height: auto;
+
       padding: 0;
+      
       border: none;
       border-radius: 0;
       box-shadow: none;

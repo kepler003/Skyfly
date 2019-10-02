@@ -503,6 +503,7 @@ blockquote, q {
 
 .form__control {
   width: 100%;
+  height: 36px;
   padding: 0.3125em 0.625em;
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
@@ -510,13 +511,16 @@ blockquote, q {
   border-radius: 10000px;
   -webkit-box-shadow: 0 2.4px 7.2px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2.4px 7.2px rgba(0, 0, 0, 0.3);
+  line-height: 18px;
 }
 
 .form__control--textarea {
+  height: auto;
   border-radius: 18px;
 }
 
 .form__control--range {
+  height: auto;
   padding: 0;
   border: none;
   border-radius: 0;
