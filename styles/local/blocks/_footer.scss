@@ -2,5 +2,103 @@
 
 
 .footer {
-  min-height: 300px;
+  @include flex();
+  justify-content: center;
+
+  padding-bottom: $gutter-lg;
+
+
+
+  &__block {
+    width: 50%;
+    padding: $gutter-sm;
+  }
+
+  &__header {
+    margin-bottom: $gutter-xs;
+
+    color: #fff;
+    font-size: $font-size-md;
+  }
+
+  &__link {
+    font-size: $font-size-sm;
+    color: #fff;
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+    }
+
+
+
+    &--social {
+      margin: $gutter-xs / 2 0;
+      font-size: $font-size-lg;
+    }
+
+    &--author {
+      color: #fff;
+    }
+  }
+
+
+
+  &__social {
+    @include flex();
+    @include flex-pos();
+
+    margin: 0 $gutter-md;
+    padding: $gutter-md;
+  }
+
+  &__copy {
+    width: 100%;
+
+    margin: $gutter-lg 0 $gutter-xs 0;
+
+    font-size: $font-size-sm;
+  }
+}
+
+
+
+@include up($sm){
+
+  .footer {
+
+    &__block {
+      width: auto;
+    }
+  }
+}
+
+@include up($md){
+  
+  .footer {
+    width: calc(100% - 230px);
+
+    margin-left: auto;
+    padding-bottom: 0;
+  }
+} 
+
+@include up($lg){
+
+  .footer {
+
+    &__block {
+      padding:  $gutter-sm $gutter-md;
+    }
+  }
+}
+
+@include up($xl){
+  
+  .footer {
+
+    &__social {
+      @include flex(column, nowrap);
+    }
+  }
 }
