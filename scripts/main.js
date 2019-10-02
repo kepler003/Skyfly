@@ -435,8 +435,10 @@ function updateDot(data){
 ////////////////////////////////////////////////////////////// Demo
 
 // Demo open btn clicked
-$('.js-demo-open').click(function(){
+$('.js-demo-open').click(function(e){
 
+  e.preventDefault();
+  
   // Open demo
   openDemo();
 });
