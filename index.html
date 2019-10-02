@@ -14,7 +14,7 @@
 <body class="box box--start">
 
   <!-- Header -->
-  <header class="box header">
+  <header class="header">
 
     <!-- Photo -->
     <div class="header__photo-box">
@@ -22,7 +22,7 @@
     </div>
     
     <!-- Name & email -->
-    <div>
+    <div class="header__info-box">
       <p class="header__name">John Doe</p>
       <p class="header__email">john.doe@gmail.com</p>
     </div>
@@ -32,7 +32,7 @@
       <i class="fas fa-bars"></i>
     </button>
 
-    <!-- Bottom nav -->
+    <!-- (Mobile) Bottom nav -->
     <nav class="header__nav header__nav--bottom">
       <ul class="box box--center">
         <li>
@@ -72,6 +72,82 @@
         </li>
       </ul>
     </nav>
+
+    <!-- (Desktop) Nav -->
+    <nav class="header__nav header__nav--desktop">
+
+      <ul class="box box--column">
+        <li class="box">
+          <button class="header__btn--nav active">
+            <span class="header__icon-box">
+              <i class="far fa-user"></i>
+            </span>
+            <span class="header__btn-name">Dashboard</span>
+          </button>
+        </li>
+        <li class="box">
+          <button class="header__btn--nav">
+            <span class="header__icon-box">
+              <i class="fas fa-plane"></i>
+            </span>
+            <span class="header__btn-name">Flights</span>
+          </button>
+        </li>
+        <li class="box">
+          <button class="header__btn--nav">
+            <span class="header__icon-box">
+              <i class="fas fa-wallet"></i>
+            </span>
+            <span class="header__btn-name">Wallet</span>
+          </button>
+        </li>
+        <li class="box">
+          <button class="header__btn--nav">
+            <span class="header__icon-box">
+              <i class="fas fa-chart-pie"></i>
+            </span>
+            <span class="header__btn-name">Statistics</span>
+          </button>
+        </li>
+        <li class="box">
+          <button class="header__btn--nav">
+            <span class="header__icon-box">
+              <i class="fas fa-user-friends"></i>
+            </span>
+            <span class="header__btn-name">Friends</span>
+          </button>
+        </li>
+        <li class="box">
+          <button class="header__btn--nav">
+            <span class="header__icon-box">
+              <i class="fas fa-globe-europe"></i>
+            </span>
+            <span class="header__btn-name">Discover</span>
+          </button>
+        </li>
+        <li class="box">
+          <button class="header__btn--nav">
+            <span class="header__icon-box">
+              <i class="fas fa-cog"></i>
+            </span>
+            <span class="header__btn-name">Settings</span>
+          </button>
+        </li>
+      </ul>
+      
+    </nav>
+
+    <!-- (Dekstop) Social -->
+    <div class="box box--center header__social-box">
+
+      <a href="#" class="btn btn--transparent btn--text-white btn--squared">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" class="btn btn--transparent btn--text-white btn--squared">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+    </div>
 
   </header>
 
@@ -291,7 +367,7 @@
         <div class="carousel__nav discover__card-nav">
 
           <button type="button" class="btn btn--circle btn--outline-alpha   carousel__btn carousel__btn--left">
-            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-left btn__icon--center"></i>
           </button>
 
           <div class="carousel__dots">
@@ -299,7 +375,7 @@
           </div>
 
           <button type="button" class="btn btn--circle btn--outline-alpha   carousel__btn carousel__btn--right">
-            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-chevron-right btn__icon--center"></i>
           </button>
 
         </div>

@@ -2,7 +2,8 @@
 
 
 .find {
-  background: url('../../../images/findcurve.svg');
+  background-color: $alpha;
+  background: url('../../../images/findcurve.svg') #fff;
   background-position: 0 0;
   background-size: contain;
   background-repeat: no-repeat;

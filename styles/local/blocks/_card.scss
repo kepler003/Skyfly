@@ -11,8 +11,10 @@
   padding: $gutter;
 
   background-color: #fff;
-  border-radius: $radius-xs;
-  box-shadow: $box-shadow-xs;
+  border-radius: $radius-xs * 2;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
 
 
 
