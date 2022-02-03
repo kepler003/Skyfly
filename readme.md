@@ -15,5 +15,4 @@ Technologies used to create this project:
 
 BEM methodology was used while creating this project to ensure better code quality.
 
-## Live demo
-[https://kepler003.github.io/Skyfly/](https://kepler003.github.io/Skyfly/)
+## [Live demo](https://kepler003.github.io/Skyfly/)
